@@ -15,6 +15,16 @@
 
 ## 常用操作
 * git help &lt;子命令&gt;
+* log
+  * commit范围符号：.. vs ...
+    * a..b表示b可达a不可达的全部commit
+    * a...b表示a可达或b可达但是不是ab都可达的全部commit
+
+  * 在终端里展示分支
+  > git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+
+  > git log --branches --remotes --tags --graph --oneline --decorate --color --abbrev-commit  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 * repo
   * git remote add &lt;repo-name&gt; &lt;repo-url&gt;
   * git remote remove &lt;repo-name&gt;
@@ -46,16 +56,5 @@
   * git diff a b # 展示b和a的差异
   * git diff a...b # 展示b和a与b最近共同祖先commit(git merge-base a b)的差异
 
-
-* log
-  * commit范围符号：.. vs ...
-    * a..b表示b可达a不可达的全部commit
-    * a...b表示a可达或b可达但是不是ab都可达的全部commit
-
-  * 在终端里展示分支
-  > git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
-
-  > git log --branches --remotes --tags --graph --oneline --decorate --color --abbrev-commit  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 ## 推荐书目
 * progit
