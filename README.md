@@ -1,6 +1,6 @@
 ## 概念、数据结构
 
-![data](assets/commit-tree-blob.png)
+![盗图](assets/commit-tree-blob.png)
 
 * commit
   * 包含commit message，author, committer
@@ -19,7 +19,7 @@
   * commit范围符号：.. vs ...
     * a..b表示b可达a不可达的全部commit
     * a...b表示a可达或b可达但是不是ab都可达的全部commit
-
+  * --author=&lt;author&gt; --comitter=&lt;committer&gt; --since='4 days ago' --until='1 days ago'
   * 在终端里展示分支
   > git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
@@ -52,9 +52,11 @@
   * git merge a
     * 合并a分支的改动到当前分支
     * 只有一次合并
-* diff
+* diff/difftool
   * git diff a b # 展示b和a的差异
   * git diff a...b # 展示b和a与b最近共同祖先commit(git merge-base a b)的差异
 
+* mergetool
+  * 冲突时执行git mergetool
 ## 推荐书目
 * progit
